@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="APEX Orthopedic Systems product catalog.">
+
+<title>Catalog | APEX ORTHOPEDIC SYSTEMS</title>
+<link rel="icon" type="image/png" href="apex-logo.png">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f9fc;
+    color:#10243d;
+}
+
+/* HEADER */
+
+header{
+    background:white;
+    min-height:80px;
+    padding:15px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:#075aaa;
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.logo span{
+    display:block;
+    color:#61758a;
+    font-size:10px;
+    letter-spacing:3px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#163b60;
+    font-size:14px;
+    font-weight:bold;
+    margin-left:22px;
+}
+
+nav a:hover{
+    color:#0b86ca;
+}
+
+.contact{
+    background:linear-gradient(135deg,#075aaa,#14a7dd);
+    color:white!important;
+    padding:12px 18px;
+    border-radius:8px;
+}
+
+/* HERO */
+
+.hero{
+    padding:80px 7%;
+    background:
+    radial-gradient(circle at 85% 20%,#d9f5ff,transparent 30%),
+    linear-gradient(135deg,#f1f9ff,#fff);
+}
+
+.hero small{
+    color:#087bc3;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    color:#062e58;
+    font-size:55px;
+    margin:15px 0;
+}
+
+.hero p{
+    max-width:700px;
+    color:#607489;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* CATALOG */
+
+.catalog{
+    padding:90px 7%;
+}
+
+.catalog-box{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    border:1px solid #dce7ef;
+    border-radius:25px;
+    padding:60px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,50,100,.08);
+}
+
+.catalog-icon{
+    width:100px;
+    height:120px;
+    margin:0 auto 25px;
+    border-radius:12px;
+    background:linear-gradient(145deg,#075aaa,#14a7dd);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    font-weight:bold;
+    box-shadow:0 15px 30px rgba(0,80,150,.2);
+}
+
+.catalog-box h2{
+    color:#062e58;
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.catalog-box p{
+    color:#65798d;
+    line-height:1.8;
+    max-width:700px;
+    margin:0 auto 28px;
+}
+
+.download-btn{
+    display:inline-block;
+    background:linear-gradient(135deg,#075aaa,#14a7dd);
+    color:white;
+    text-decoration:none;
+    padding:15px 28px;
+    border-radius:9px;
+    font-weight:bold;
+    box-shadow:0 10px 25px rgba(0,80,150,.18);
+}
+
+.download-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* CATEGORIES */
+
+.categories{
+    background:#eef6fb;
+    padding:80px 7%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title small{
+    color:#087bc3;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.title h2{
+    color:#062e58;
+    font-size:40px;
+    margin:12px 0;
+}
+
+.title p{
+    color:#687c90;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.card{
+    background:white;
+    border:1px solid #dce7ef;
+    border-radius:18px;
+    padding:30px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 18px 40px rgba(0,60,120,.12);
+}
+
+.card-number{
+    width:50px;
+    height:50px;
+    border-radius:14px;
+    background:#e6f5fc;
+    color:#087bc3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.card h3{
+    color:#082f59;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#687b8e;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* CATALOG NOTE */
+
+.note-section{
+    padding:75px 7%;
+    background:white;
+}
+
+.note{
+    max-width:950px;
+    margin:auto;
+    padding:25px;
+    border-radius:15px;
+    background:#fff8e8;
+    border:1px solid #f0dca5;
+    color:#6d5a2b;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta{
+    background:linear-gradient(135deg,#062d57,#087dc5);
+    color:white;
+    text-align:center;
+    padding:75px 7%;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    color:#dcecf7;
+    margin-bottom:25px;
+}
+
+.cta a{
+    display:inline-block;
+    background:white;
+    color:#075aaa;
+    text-decoration:none;
+    padding:14px 25px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#061f3d;
+    color:#c9d8e6;
+    padding:50px 7% 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+footer p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+footer a{
+    display:block;
+    text-decoration:none;
+    color:#c9d8e6;
+    margin-bottom:9px;
+    font-size:14px;
+}
+
+footer a:hover{
+    color:white;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:35px;
+    padding-top:18px;
+    text-align:center;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    header{
+        padding:15px 4%;
+    }
+
+    nav a{
+        margin-left:7px;
+        font-size:11px;
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        text-align:center;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .catalog-box{
+        padding:35px 20px;
+    }
+
+    .category-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+
+APEX
+
+<span>ORTHOPEDIC SYSTEMS</span>
+
+</div>
+
+
+<nav>
+
+<a href="index.html">
+HOME
+</a>
+
+<a href="products.html">
+PRODUCTS
+</a>
+
+<a href="about.html">
+ABOUT
+</a>
+
+<a href="quality.html">
+QUALITY
+</a>
+
+<a href="catalog.html">
+CATALOG
+</a>
+
+<a href="index.html#contact"
+class="contact">
+CONTACT
+</a>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<small>
+APEX PRODUCT CATALOG
+</small>
+
+<h1>
+Product Catalog
+</h1>
+
+<p>
+Explore the APEX Orthopedic Systems product
+portfolio through our professional catalog.
+</p>
+
+</section>
+
+
+<!-- CATALOG DOWNLOAD -->
+
+<section class="catalog">
+
+<div class="catalog-box">
+
+<div class="catalog-icon">
+PDF
+</div>
+
+<h2>
+APEX Orthopedic Systems Catalog
+</h2>
+
+<p>
+Our catalog can include orthopedic plates,
+screws, surgical instruments and instrument
+cases with product photographs, names,
+sizes and verified specifications.
+</p>
+
+<!-- IMPORTANT:
+     Jab PDF ready ho to uska naam
+     apex-catalog.pdf rakhna hai -->
+
+<a href="apex-catalog.pdf"
+class="download-btn"
+download>
+
+DOWNLOAD CATALOG
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="categories">
+
+<div class="title">
+
+<small>
+CATALOG CONTENT
+</small>
+
+<h2>
+Product Categories
+</h2>
+
+<p>
+Main categories that can be included
+in the APEX catalog.
+</p>
+
+</div>
+
+
+<div class="category-grid">
+
+
+<div class="card">
+
+<div class="card-number">
+01
+</div>
+
+<h3>
+Orthopedic Plates
+</h3>
+
+<p>
+Locking and non-locking orthopedic
+plate designs.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-number">
+02
+</div>
+
+<h3>
+Orthopedic Screws
+</h3>
+
+<p>
+Locking, cortical and cancellous
+screw configurations.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-number">
+03
+</div>
+
+<h3>
+Surgical Instruments
+</h3>
+
+<p>
+Professional orthopedic instruments
+and instrument sets.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-number">
+04
+</div>
+
+<h3>
+Instrument Cases
+</h3>
+
+<p>
+Instrument cases and organized
+storage solutions.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- NOTE -->
+
+<section class="note-section">
+
+<div class="note">
+
+<strong>Catalog Note:</strong>
+
+The final catalog should contain only
+verified product names, specifications,
+sizes, materials, certifications and
+regulatory information. Replace the
+placeholder PDF with your approved
+APEX catalog before publishing the
+website.
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>
+Need More Product Information?
+</h2>
+
+<p>
+Contact APEX ORTHOPEDIC SYSTEMS for
+product and business inquiries.
+</p>
+
+<a href="index.html#contact">
+CONTACT APEX
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+APEX ORTHOPEDIC SYSTEMS
+</h3>
+
+<p>
+Orthopedic Plates • Screws •
+Surgical Instruments •
+Instrument Cases
+</p>
+
+<br>
+
+<p>
+Precision • Quality • Life
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+QUICK LINKS
+</h3>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="products.html">
+Products
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="quality.html">
+Quality
+</a>
+
+<a href="catalog.html">
+Catalog
+</a>
+
+</div>
+
+
+<div>
+
+<h3>
+CONTACT
+</h3>
+
+<p>
+WhatsApp: ADD YOUR NUMBER
+</p>
+
+<p>
+Email: ADD YOUR EMAIL
+</p>
+
+<p>
+Pakistan
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 APEX ORTHOPEDIC SYSTEMS.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>

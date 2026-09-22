@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="About APEX Orthopedic Systems - orthopedic plates, screws, surgical instruments and instrument cases.">
+
+<title>About Us | APEX ORTHOPEDIC SYSTEMS</title>
+<link rel="icon" type="image/png" href="apex-logo.png">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f9fc;
+    color:#10243d;
+}
+
+/* HEADER */
+
+header{
+    background:#fff;
+    min-height:80px;
+    padding:15px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:#075aaa;
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.logo span{
+    display:block;
+    color:#61758a;
+    font-size:10px;
+    letter-spacing:3px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#163b60;
+    font-size:14px;
+    font-weight:bold;
+    margin-left:22px;
+}
+
+nav a:hover{
+    color:#0b86ca;
+}
+
+.contact{
+    background:linear-gradient(135deg,#075aaa,#14a7dd);
+    color:white!important;
+    padding:12px 18px;
+    border-radius:8px;
+}
+
+/* HERO */
+
+.hero{
+    padding:80px 7%;
+    background:
+    radial-gradient(circle at 85% 20%,#d9f5ff,transparent 30%),
+    linear-gradient(135deg,#f1f9ff,#fff);
+}
+
+.hero small{
+    color:#087bc3;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    color:#062e58;
+    font-size:55px;
+    margin:15px 0;
+}
+
+.hero p{
+    max-width:720px;
+    color:#607489;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* MAIN */
+
+section{
+    padding:80px 7%;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.about-text h2{
+    color:#062e58;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#62768a;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+/* BRAND BOX */
+
+.brand-box{
+    min-height:390px;
+    border-radius:25px;
+    padding:45px;
+    background:
+    radial-gradient(circle at 80% 20%,rgba(45,190,240,.3),transparent 30%),
+    linear-gradient(145deg,#062d57,#087dc5);
+    color:white;
+    box-shadow:0 25px 55px rgba(0,65,125,.2);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.brand-box .apex{
+    font-size:55px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.brand-box .systems{
+    letter-spacing:5px;
+    font-size:13px;
+    color:#d9edf8;
+}
+
+.brand-box hr{
+    width:70px;
+    border:0;
+    border-top:3px solid white;
+    margin:25px 0;
+}
+
+.brand-box h3{
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.brand-box p{
+    color:#dcecf7;
+    line-height:1.7;
+}
+
+/* VALUES */
+
+.values{
+    background:#eef6fb;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title small{
+    color:#087bc3;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.title h2{
+    color:#062e58;
+    font-size:40px;
+    margin:12px 0;
+}
+
+.title p{
+    color:#687c90;
+}
+
+.value-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.value-card{
+    background:white;
+    border:1px solid #dce7ef;
+    border-radius:18px;
+    padding:30px;
+    transition:.3s;
+}
+
+.value-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 18px 40px rgba(0,60,120,.12);
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    border-radius:15px;
+    background:#e6f5fc;
+    color:#087bc3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.value-card h3{
+    color:#082f59;
+    margin-bottom:10px;
+}
+
+.value-card p{
+    color:#687b8e;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+    background:white;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.portfolio-card{
+    padding:30px;
+    border:1px solid #dce7ef;
+    border-radius:18px;
+    background:#f9fcff;
+}
+
+.portfolio-card h3{
+    color:#062f59;
+    margin-bottom:10px;
+}
+
+.portfolio-card p{
+    color:#65798d;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta{
+    background:linear-gradient(135deg,#062d57,#087dc5);
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    color:#dcecf7;
+    margin-bottom:25px;
+}
+
+.cta a{
+    display:inline-block;
+    background:white;
+    color:#075aaa;
+    text-decoration:none;
+    padding:14px 25px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#061f3d;
+    color:#c9d8e6;
+    padding:50px 7% 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+footer p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+footer a{
+    display:block;
+    text-decoration:none;
+    color:#c9d8e6;
+    margin-bottom:9px;
+    font-size:14px;
+}
+
+footer a:hover{
+    color:white;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:35px;
+    padding-top:18px;
+    text-align:center;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    header{
+        padding:15px 4%;
+    }
+
+    nav a{
+        margin-left:7px;
+        font-size:11px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .value-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        text-align:center;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .value-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .brand-box .apex{
+        font-size:43px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+
+APEX
+
+<span>ORTHOPEDIC SYSTEMS</span>
+
+</div>
+
+
+<nav>
+
+<a href="index.html">
+HOME
+</a>
+
+<a href="products.html">
+PRODUCTS
+</a>
+
+<a href="about.html">
+ABOUT
+</a>
+
+<a href="quality.html">
+QUALITY
+</a>
+
+<a href="index.html#contact"
+class="contact">
+CONTACT
+</a>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<small>
+ABOUT APEX
+</small>
+
+<h1>
+Precision. Quality. Life.
+</h1>
+
+<p>
+APEX ORTHOPEDIC SYSTEMS is focused on
+orthopedic product solutions including
+plates, screws, surgical instruments and
+instrument cases.
+</p>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section>
+
+<div class="about-grid">
+
+
+<div class="about-text">
+
+<h2>
+Focused on Orthopedic
+Product Solutions
+</h2>
+
+<p>
+APEX ORTHOPEDIC SYSTEMS is a professional
+orthopedic product brand focused on presenting
+a clear and organized range of orthopedic
+plates, screws, surgical instruments and
+instrument cases.
+</p>
+
+<p>
+Our goal is to make product information easy
+to understand for professional customers,
+distributors and procurement teams.
+</p>
+
+<p>
+We believe that professional product
+presentation, consistent information and
+customer communication are important parts
+of a modern orthopedic business.
+</p>
+
+</div>
+
+
+<div class="brand-box">
+
+<div class="apex">
+APEX
+</div>
+
+<div class="systems">
+ORTHOPEDIC SYSTEMS
+</div>
+
+<hr>
+
+<h3>
+Precision • Quality • Life
+</h3>
+
+<p>
+Orthopedic plates, screws, instruments
+and instrument case solutions for
+professional customers.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- VALUES -->
+
+<section class="values">
+
+<div class="title">
+
+<small>
+OUR PRINCIPLES
+</small>
+
+<h2>
+What APEX Focuses On
+</h2>
+
+<p>
+A professional approach to product,
+information and customer service.
+</p>
+
+</div>
+
+
+<div class="value-grid">
+
+
+<div class="value-card">
+
+<div class="icon">
+01
+</div>
+
+<h3>
+Precision
+</h3>
+
+<p>
+Focused product presentation with
+clear and organized information.
+</p>
+
+</div>
+
+
+<div class="value-card">
+
+<div class="icon">
+02
+</div>
+
+<h3>
+Quality
+</h3>
+
+<p>
+Product specifications and quality
+information should be based on
+verified documentation.
+</p>
+
+</div>
+
+
+<div class="value-card">
+
+<div class="icon">
+03
+</div>
+
+<h3>
+Reliability
+</h3>
+
+<p>
+Clear communication and professional
+handling of customer requirements.
+</p>
+
+</div>
+
+
+<div class="value-card">
+
+<div class="icon">
+04
+</div>
+
+<h3>
+Service
+</h3>
+
+<p>
+Supporting customers and distribution
+partners with product information.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio">
+
+<div class="title">
+
+<small>
+OUR PORTFOLIO
+</small>
+
+<h2>
+Our Product Categories
+</h2>
+
+<p>
+Explore the main APEX product categories.
+</p>
+
+</div>
+
+
+<div class="portfolio-grid">
+
+
+<div class="portfolio-card">
+
+<h3>
+Orthopedic Plates
+</h3>
+
+<p>
+A range of plate configurations can be
+presented with actual product images,
+verified names, sizes and specifications.
+</p>
+
+</div>
+
+
+<div class="portfolio-card">
+
+<h3>
+Orthopedic Screws
+</h3>
+
+<p>
+Locking, cortical and cancellous screw
+families can be presented with their
+verified product specifications.
+</p>
+
+</div>
+
+
+<div class="portfolio-card">
+
+<h3>
+Surgical Instruments
+</h3>
+
+<p>
+Professional orthopedic instruments and
+procedure-support products can be added
+to the APEX portfolio.
+</p>
+
+</div>
+
+
+<div class="portfolio-card">
+
+<h3>
+Instrument Cases
+</h3>
+
+<p>
+Instrument cases and organized storage
+solutions can be displayed according
+to your actual product range.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>
+Work With APEX
+</h2>
+
+<p>
+For product information and professional
+business inquiries, contact APEX Orthopedic Systems.
+</p>
+
+<a href="index.html#contact">
+CONTACT APEX
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+APEX ORTHOPEDIC SYSTEMS
+</h3>
+
+<p>
+Orthopedic Plates • Screws •
+Surgical Instruments •
+Instrument Cases
+</p>
+
+<br>
+
+<p>
+Precision • Quality • Life
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+QUICK LINKS
+</h3>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="products.html">
+Products
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="quality.html">
+Quality
+</a>
+
+</div>
+
+
+<div>
+
+<h3>
+CONTACT
+</h3>
+
+<p>
+WhatsApp: ADD YOUR NUMBER
+</p>
+
+<p>
+Email: ADD YOUR EMAIL
+</p>
+
+<p>
+Pakistan
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 APEX ORTHOPEDIC SYSTEMS.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>

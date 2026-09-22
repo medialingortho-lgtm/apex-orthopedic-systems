@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="APEX Orthopedic Systems quality and standards information.">
+
+<title>Quality & Standards | APEX ORTHOPEDIC SYSTEMS</title>
+<link rel="icon" type="image/png" href="apex-logo.png">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f9fc;
+    color:#10243d;
+}
+
+/* HEADER */
+
+header{
+    background:white;
+    min-height:80px;
+    padding:15px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:#075aaa;
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.logo span{
+    display:block;
+    color:#61758a;
+    font-size:10px;
+    letter-spacing:3px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#163b60;
+    font-size:14px;
+    font-weight:bold;
+    margin-left:22px;
+}
+
+nav a:hover{
+    color:#0b86ca;
+}
+
+.contact{
+    background:linear-gradient(135deg,#075aaa,#14a7dd);
+    color:white!important;
+    padding:12px 18px;
+    border-radius:8px;
+}
+
+/* HERO */
+
+.hero{
+    padding:80px 7%;
+    background:
+    radial-gradient(circle at 85% 20%,#d9f5ff,transparent 30%),
+    linear-gradient(135deg,#f1f9ff,#fff);
+}
+
+.hero small{
+    color:#087bc3;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    color:#062e58;
+    font-size:55px;
+    margin:15px 0;
+}
+
+.hero p{
+    max-width:720px;
+    color:#607489;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* INTRO */
+
+.intro{
+    padding:80px 7%;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.intro h2{
+    color:#062e58;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.intro p{
+    color:#62768a;
+    line-height:1.8;
+    margin-bottom:17px;
+}
+
+/* QUALITY BOX */
+
+.quality-visual{
+    min-height:360px;
+    border-radius:25px;
+    padding:40px;
+    background:
+    radial-gradient(circle at 80% 20%,rgba(55,195,240,.3),transparent 30%),
+    linear-gradient(145deg,#062d57,#087dc5);
+    color:white;
+    box-shadow:0 25px 55px rgba(0,65,125,.2);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.quality-icon{
+    width:75px;
+    height:75px;
+    border:3px solid white;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+.quality-visual h3{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.quality-visual p{
+    color:#dcecf7;
+    line-height:1.7;
+}
+
+/* QUALITY CARDS */
+
+.quality-section{
+    background:#eef6fb;
+    padding:80px 7%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title small{
+    color:#087bc3;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.title h2{
+    color:#062e58;
+    font-size:40px;
+    margin:12px 0;
+}
+
+.title p{
+    color:#687c90;
+}
+
+.quality-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border:1px solid #dce7ef;
+    border-radius:18px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 18px 40px rgba(0,60,120,.12);
+}
+
+.number{
+    width:50px;
+    height:50px;
+    border-radius:14px;
+    background:#e6f5fc;
+    color:#087bc3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:#082f59;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#687b8e;
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* DOCUMENTATION */
+
+.documentation{
+    padding:80px 7%;
+    background:white;
+}
+
+.doc-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.doc-card{
+    border:1px solid #dce7ef;
+    border-radius:18px;
+    padding:30px;
+    background:#f9fcff;
+}
+
+.doc-card h3{
+    color:#062f59;
+    margin-bottom:12px;
+}
+
+.doc-card p{
+    color:#65798d;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* IMPORTANT NOTE */
+
+.note{
+    margin-top:35px;
+    padding:22px;
+    border-radius:15px;
+    background:#fff8e8;
+    border:1px solid #f0dca5;
+    color:#6d5a2b;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta{
+    background:linear-gradient(135deg,#062d57,#087dc5);
+    color:white;
+    text-align:center;
+    padding:75px 7%;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    color:#dcecf7;
+    margin-bottom:25px;
+}
+
+.cta a{
+    display:inline-block;
+    background:white;
+    color:#075aaa;
+    text-decoration:none;
+    padding:14px 25px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#061f3d;
+    color:#c9d8e6;
+    padding:50px 7% 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+footer p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+footer a{
+    display:block;
+    text-decoration:none;
+    color:#c9d8e6;
+    margin-bottom:9px;
+    font-size:14px;
+}
+
+footer a:hover{
+    color:white;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:35px;
+    padding-top:18px;
+    text-align:center;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    header{
+        padding:15px 4%;
+    }
+
+    nav a{
+        margin-left:7px;
+        font-size:11px;
+    }
+
+    .intro-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quality-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .doc-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        text-align:center;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .quality-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+
+APEX
+
+<span>ORTHOPEDIC SYSTEMS</span>
+
+</div>
+
+
+<nav>
+
+<a href="index.html">
+HOME
+</a>
+
+<a href="products.html">
+PRODUCTS
+</a>
+
+<a href="about.html">
+ABOUT
+</a>
+
+<a href="quality.html">
+QUALITY
+</a>
+
+<a href="index.html#contact"
+class="contact">
+CONTACT
+</a>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<small>
+QUALITY & STANDARDS
+</small>
+
+<h1>
+Quality Focus
+</h1>
+
+<p>
+A dedicated section for presenting verified
+quality information, product documentation,
+specifications and applicable standards.
+</p>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+<div class="intro-grid">
+
+
+<div>
+
+<h2>
+Committed to Consistent
+Product Information
+</h2>
+
+<p>
+APEX ORTHOPEDIC SYSTEMS focuses on clear,
+organized and accurate presentation of
+orthopedic product information.
+</p>
+
+<p>
+Product specifications, technical information
+and quality documentation should always be
+based on the actual approved information
+available for each product.
+</p>
+
+<p>
+This page can be updated as your verified
+quality documentation and company
+certifications are finalized.
+</p>
+
+</div>
+
+
+<div class="quality-visual">
+
+<div class="quality-icon">
+✓
+</div>
+
+<h3>
+QUALITY FIRST
+</h3>
+
+<p>
+Professional product presentation supported
+by verified specifications and documentation.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- QUALITY AREAS -->
+
+<section class="quality-section">
+
+<div class="title">
+
+<small>
+QUALITY AREAS
+</small>
+
+<h2>
+Our Quality Focus
+</h2>
+
+<p>
+Important areas that can be documented
+on the APEX website.
+</p>
+
+</div>
+
+
+<div class="quality-grid">
+
+
+<div class="card">
+
+<div class="number">
+01
+</div>
+
+<h3>
+Product Control
+</h3>
+
+<p>
+Add your actual inspection, measurement
+and product-control procedures here.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="number">
+02
+</div>
+
+<h3>
+Material Information
+</h3>
+
+<p>
+List only verified material information
+for each applicable product family.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="number">
+03
+</div>
+
+<h3>
+Dimensional Accuracy
+</h3>
+
+<p>
+Product dimensions and tolerances should
+be presented according to approved
+technical documentation.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="number">
+04
+</div>
+
+<h3>
+Documentation
+</h3>
+
+<p>
+Technical files, inspection records and
+approved product documentation can be
+added here.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="number">
+05
+</div>
+
+<h3>
+Traceability
+</h3>
+
+<p>
+If applicable, describe your actual batch,
+lot and traceability processes.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="number">
+06
+</div>
+
+<h3>
+Continuous Improvement
+</h3>
+
+<p>
+Use this section to describe your actual
+quality-improvement processes.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- DOCUMENTATION -->
+
+<section class="documentation">
+
+<div class="title">
+
+<small>
+DOCUMENTATION
+</small>
+
+<h2>
+Quality Documentation
+</h2>
+
+<p>
+A professional area for verified company
+and product documentation.
+</p>
+
+</div>
+
+
+<div class="doc-grid">
+
+
+<div class="doc-card">
+
+<h3>
+Technical Specifications
+</h3>
+
+<p>
+Add approved technical specifications,
+dimensions, materials and product
+configuration information here.
+</p>
+
+</div>
+
+
+<div class="doc-card">
+
+<h3>
+Inspection Information
+</h3>
+
+<p>
+Add your actual inspection and testing
+information where appropriate.
+</p>
+
+</div>
+
+
+<div class="doc-card">
+
+<h3>
+Certificates
+</h3>
+
+<p>
+Verified certificates can be listed here
+with their correct names, numbers and
+validity information.
+</p>
+
+</div>
+
+
+<div class="doc-card">
+
+<h3>
+Regulatory Information
+</h3>
+
+<p>
+Add only regulatory information that
+applies to your actual company and
+specific products.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="note">
+
+<strong>Important:</strong>
+Do not publish ISO, CE, FDA, MDR or any
+other certification or regulatory claim
+unless it has been verified for your
+company and the specific products.
+Incorrect regulatory claims should not
+be placed on the final website.
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>
+Need Product Information?
+</h2>
+
+<p>
+Contact APEX ORTHOPEDIC SYSTEMS for
+product and business inquiries.
+</p>
+
+<a href="index.html#contact">
+CONTACT APEX
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+APEX ORTHOPEDIC SYSTEMS
+</h3>
+
+<p>
+Orthopedic Plates • Screws •
+Surgical Instruments •
+Instrument Cases
+</p>
+
+<br>
+
+<p>
+Precision • Quality • Life
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+QUICK LINKS
+</h3>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="products.html">
+Products
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="quality.html">
+Quality
+</a>
+
+</div>
+
+
+<div>
+
+<h3>
+CONTACT
+</h3>
+
+<p>
+WhatsApp: ADD YOUR NUMBER
+</p>
+
+<p>
+Email: ADD YOUR EMAIL
+</p>
+
+<p>
+Pakistan
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 APEX ORTHOPEDIC SYSTEMS.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>

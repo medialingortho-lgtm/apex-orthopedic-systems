@@ -1,0 +1,621 @@
+/* =====================================================
+   APEX ORTHOPEDIC SYSTEMS
+   Professional Medical Device Website
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8fc;
+    color: #172033;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e7edf4;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    color: #07549a;
+    line-height: 1.1;
+}
+
+.logo strong {
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    color: #52677d;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: #26384d;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+nav a:hover {
+    color: #0871c9;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(120deg, #f8fbff 0%, #eaf4fc 55%, #ffffff 100%);
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 680px;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    color: #063b78;
+    margin-bottom: 22px;
+    letter-spacing: -2px;
+}
+
+.hero h2 {
+    font-size: 25px;
+    color: #1670b7;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #536476;
+    max-width: 650px;
+    margin-bottom: 32px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.btn,
+.download-btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #07549a;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #063b78;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: white;
+    color: #07549a;
+    border: 1px solid #07549a;
+}
+
+.btn-secondary:hover {
+    background: #07549a;
+    color: white;
+}
+
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    color: #063b78;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: auto;
+    color: #647486;
+}
+
+
+/* ================= PRODUCT GRID ================= */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #e2e9f1;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(18, 54, 89, 0.06);
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(18, 54, 89, 0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    background: #f8fbfe;
+    padding: 20px;
+}
+
+.product-card-content {
+    padding: 22px;
+}
+
+.product-card h3 {
+    color: #063b78;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #68788a;
+    font-size: 14px;
+}
+
+
+/* ================= CATEGORY BOXES ================= */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-box {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #e3eaf1;
+    transition: 0.3s;
+}
+
+.category-box:hover {
+    transform: translateY(-5px);
+    border-color: #0a70bc;
+}
+
+.category-box h3 {
+    color: #063b78;
+    margin-bottom: 8px;
+}
+
+.category-box p {
+    color: #68788a;
+    font-size: 14px;
+}
+
+
+/* ================= PAGE HERO ================= */
+
+.page-hero {
+    background: linear-gradient(135deg, #063b78, #0b68b3);
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.page-hero h1 {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.page-hero p {
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.9;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-content h2 {
+    color: #063b78;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #596a7b;
+    margin-bottom: 16px;
+}
+
+.about-box {
+    background: linear-gradient(135deg, #063b78, #0b68b3);
+    color: white;
+    border-radius: 15px;
+    padding: 45px;
+    box-shadow: 0 15px 35px rgba(6, 59, 120, 0.18);
+}
+
+.about-box h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+
+/* ================= QUALITY ================= */
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.quality-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e3eaf1;
+}
+
+.quality-card h3 {
+    color: #063b78;
+    margin-bottom: 12px;
+}
+
+.quality-card p {
+    color: #647486;
+}
+
+
+/* ================= CATALOG ================= */
+
+.catalog-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    background: white;
+    padding: 60px 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.07);
+}
+
+.catalog-box h2 {
+    color: #063b78;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.catalog-box p {
+    color: #647486;
+    margin-bottom: 30px;
+}
+
+.download-btn {
+    background: #07549a;
+    color: white;
+}
+
+.download-btn:hover {
+    background: #063b78;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    background: #f5f8fc;
+}
+
+.contact-container {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 35px;
+}
+
+.contact-info,
+.contact-form {
+    background: white;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.contact-info h2,
+.contact-form h2 {
+    color: #063b78;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin-bottom: 23px;
+}
+
+.contact-item strong {
+    display: block;
+    color: #063b78;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #637386;
+}
+
+.contact-item a {
+    color: #0b68b3;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 20px;
+    background: #168a3b;
+    color: white !important;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+/* ================= FORM ================= */
+
+.contact-form form {
+    display: grid;
+    gap: 15px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    color: #27384b;
+    margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d8e0e8;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    border-color: #0871c9;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.submit-btn {
+    border: none;
+    padding: 15px;
+    background: #07549a;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #063b78;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #071d33;
+    color: white;
+    padding: 50px 0 25px;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aebdcb;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 950px) {
+
+    .nav {
+        flex-direction: column;
+        padding: 18px 0;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quality-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 55px 0;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .page-hero {
+        padding: 65px 20px;
+    }
+
+    .page-hero h1 {
+        font-size: 36px;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
+    .products-grid,
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 25px;
+    }
+
+    .about-box {
+        padding: 30px;
+    }
+}
+/* ================= APEX LOGO ================= */
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo img {
+    width: 190px;
+    height: auto;
+    max-height: 58px;
+    object-fit: contain;
+}
+
+
+/* Mobile logo */
+
+@media (max-width: 600px) {
+
+    .brand-logo img {
+        width: 165px;
+        max-height: 52px;
+    }
+
+}
