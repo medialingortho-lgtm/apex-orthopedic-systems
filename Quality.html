@@ -9,9 +9,9 @@
 content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="APEX Orthopedic Systems product catalog.">
+content="APEX Orthopedic Systems quality and standards information.">
 
-<title>Catalog | APEX ORTHOPEDIC SYSTEMS</title>
+<title>Quality & Standards | APEX ORTHOPEDIC SYSTEMS</title>
 <link rel="icon" type="image/png" href="apex-logo.png">
 <style>
 
@@ -101,75 +101,79 @@ nav a:hover{
 }
 
 .hero p{
-    max-width:700px;
+    max-width:720px;
     color:#607489;
     font-size:18px;
     line-height:1.7;
 }
 
-/* CATALOG */
+/* INTRO */
 
-.catalog{
-    padding:90px 7%;
+.intro{
+    padding:80px 7%;
 }
 
-.catalog-box{
-    max-width:1000px;
-    margin:auto;
-    background:white;
-    border:1px solid #dce7ef;
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.intro h2{
+    color:#062e58;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.intro p{
+    color:#62768a;
+    line-height:1.8;
+    margin-bottom:17px;
+}
+
+/* QUALITY BOX */
+
+.quality-visual{
+    min-height:360px;
     border-radius:25px;
-    padding:60px;
-    text-align:center;
-    box-shadow:0 15px 40px rgba(0,50,100,.08);
+    padding:40px;
+    background:
+    radial-gradient(circle at 80% 20%,rgba(55,195,240,.3),transparent 30%),
+    linear-gradient(145deg,#062d57,#087dc5);
+    color:white;
+    box-shadow:0 25px 55px rgba(0,65,125,.2);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-.catalog-icon{
-    width:100px;
-    height:120px;
-    margin:0 auto 25px;
-    border-radius:12px;
-    background:linear-gradient(145deg,#075aaa,#14a7dd);
-    color:white;
+.quality-icon{
+    width:75px;
+    height:75px;
+    border:3px solid white;
+    border-radius:20px;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:38px;
+    font-size:32px;
     font-weight:bold;
-    box-shadow:0 15px 30px rgba(0,80,150,.2);
+    margin-bottom:25px;
 }
 
-.catalog-box h2{
-    color:#062e58;
-    font-size:36px;
-    margin-bottom:15px;
+.quality-visual h3{
+    font-size:28px;
+    margin-bottom:12px;
 }
 
-.catalog-box p{
-    color:#65798d;
-    line-height:1.8;
-    max-width:700px;
-    margin:0 auto 28px;
+.quality-visual p{
+    color:#dcecf7;
+    line-height:1.7;
 }
 
-.download-btn{
-    display:inline-block;
-    background:linear-gradient(135deg,#075aaa,#14a7dd);
-    color:white;
-    text-decoration:none;
-    padding:15px 28px;
-    border-radius:9px;
-    font-weight:bold;
-    box-shadow:0 10px 25px rgba(0,80,150,.18);
-}
+/* QUALITY CARDS */
 
-.download-btn:hover{
-    transform:translateY(-2px);
-}
-
-/* CATEGORIES */
-
-.categories{
+.quality-section{
     background:#eef6fb;
     padding:80px 7%;
 }
@@ -195,17 +199,17 @@ nav a:hover{
     color:#687c90;
 }
 
-.category-grid{
+.quality-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
 }
 
 .card{
     background:white;
+    padding:30px;
     border:1px solid #dce7ef;
     border-radius:18px;
-    padding:30px;
     transition:.3s;
 }
 
@@ -214,7 +218,7 @@ nav a:hover{
     box-shadow:0 18px 40px rgba(0,60,120,.12);
 }
 
-.card-number{
+.number{
     width:50px;
     height:50px;
     border-radius:14px;
@@ -224,31 +228,56 @@ nav a:hover{
     align-items:center;
     justify-content:center;
     font-weight:bold;
-    margin-bottom:18px;
+    margin-bottom:20px;
 }
 
 .card h3{
     color:#082f59;
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
 .card p{
     color:#687b8e;
     font-size:14px;
-    line-height:1.6;
+    line-height:1.7;
 }
 
-/* CATALOG NOTE */
+/* DOCUMENTATION */
 
-.note-section{
-    padding:75px 7%;
+.documentation{
+    padding:80px 7%;
     background:white;
 }
 
+.doc-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.doc-card{
+    border:1px solid #dce7ef;
+    border-radius:18px;
+    padding:30px;
+    background:#f9fcff;
+}
+
+.doc-card h3{
+    color:#062f59;
+    margin-bottom:12px;
+}
+
+.doc-card p{
+    color:#65798d;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* IMPORTANT NOTE */
+
 .note{
-    max-width:950px;
-    margin:auto;
-    padding:25px;
+    margin-top:35px;
+    padding:22px;
     border-radius:15px;
     background:#fff8e8;
     border:1px solid #f0dca5;
@@ -343,8 +372,16 @@ footer a:hover{
         font-size:11px;
     }
 
-    .category-grid{
+    .intro-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quality-grid{
         grid-template-columns:repeat(2,1fr);
+    }
+
+    .doc-grid{
+        grid-template-columns:1fr;
     }
 
     .footer-grid{
@@ -373,11 +410,7 @@ footer a:hover{
         font-size:40px;
     }
 
-    .catalog-box{
-        padding:35px 20px;
-    }
-
-    .category-grid{
+    .quality-grid{
         grid-template-columns:1fr;
     }
 
@@ -437,97 +470,119 @@ CONTACT
 <section class="hero">
 
 <small>
-APEX PRODUCT CATALOG
+QUALITY & STANDARDS
 </small>
 
 <h1>
-Product Catalog
+Quality Focus
 </h1>
 
 <p>
-Explore the APEX Orthopedic Systems product
-portfolio through our professional catalog.
+A dedicated section for presenting verified
+quality information, product documentation,
+specifications and applicable standards.
 </p>
 
 </section>
 
 
-<!-- CATALOG DOWNLOAD -->
+<!-- INTRO -->
 
-<section class="catalog">
+<section class="intro">
 
-<div class="catalog-box">
+<div class="intro-grid">
 
-<div class="catalog-icon">
-PDF
-</div>
+
+<div>
 
 <h2>
-APEX Orthopedic Systems Catalog
+Committed to Consistent
+Product Information
 </h2>
 
 <p>
-Our catalog can include orthopedic plates,
-screws, surgical instruments and instrument
-cases with product photographs, names,
-sizes and verified specifications.
+APEX ORTHOPEDIC SYSTEMS focuses on clear,
+organized and accurate presentation of
+orthopedic product information.
 </p>
 
-<!-- IMPORTANT:
-     Jab PDF ready ho to uska naam
-     apex-catalog.pdf rakhna hai -->
+<p>
+Product specifications, technical information
+and quality documentation should always be
+based on the actual approved information
+available for each product.
+</p>
 
-<a href="apex-catalog.pdf"
-class="download-btn"
-download>
+<p>
+This page can be updated as your verified
+quality documentation and company
+certifications are finalized.
+</p>
 
-DOWNLOAD CATALOG
+</div>
 
-</a>
+
+<div class="quality-visual">
+
+<div class="quality-icon">
+✓
+</div>
+
+<h3>
+QUALITY FIRST
+</h3>
+
+<p>
+Professional product presentation supported
+by verified specifications and documentation.
+</p>
+
+</div>
+
 
 </div>
 
 </section>
 
 
-<!-- CATEGORIES -->
+<!-- QUALITY AREAS -->
 
-<section class="categories">
+<section class="quality-section">
 
 <div class="title">
 
 <small>
-CATALOG CONTENT
+QUALITY AREAS
 </small>
 
 <h2>
-Product Categories
+Our Quality Focus
 </h2>
 
 <p>
-Main categories that can be included
-in the APEX catalog.
+Important areas that can be documented
+on the APEX website.
 </p>
 
 </div>
 
 
-<div class="category-grid">
+<div class="quality-grid">
 
 
 <div class="card">
 
-<div class="card-number">
+<div class="number">
 01
 </div>
 
 <h3>
-Orthopedic Plates
+Product Control
 </h3>
 
 <p>
-Locking and non-locking orthopedic
-plate designs.
+Add your actual inspection, measurement
+and product-control procedures here.
 </p>
 
 </div>
@@ -535,17 +590,17 @@ plate designs.
 
 <div class="card">
 
-<div class="card-number">
+<div class="number">
 02
 </div>
 
 <h3>
-Orthopedic Screws
+Material Information
 </h3>
 
 <p>
-Locking, cortical and cancellous
-screw configurations.
+List only verified material information
+for each applicable product family.
 </p>
 
 </div>
@@ -553,17 +608,18 @@ screw configurations.
 
 <div class="card">
 
-<div class="card-number">
+<div class="number">
 03
 </div>
 
 <h3>
-Surgical Instruments
+Dimensional Accuracy
 </h3>
 
 <p>
-Professional orthopedic instruments
-and instrument sets.
+Product dimensions and tolerances should
+be presented according to approved
+technical documentation.
 </p>
 
 </div>
@@ -571,17 +627,54 @@ and instrument sets.
 
 <div class="card">
 
-<div class="card-number">
+<div class="number">
 04
 </div>
 
 <h3>
-Instrument Cases
+Documentation
 </h3>
 
 <p>
-Instrument cases and organized
-storage solutions.
+Technical files, inspection records and
+approved product documentation can be
+added here.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="number">
+05
+</div>
+
+<h3>
+Traceability
+</h3>
+
+<p>
+If applicable, describe your actual batch,
+lot and traceability processes.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="number">
+06
+</div>
+
+<h3>
+Continuous Improvement
+</h3>
+
+<p>
+Use this section to describe your actual
+quality-improvement processes.
 </p>
 
 </div>
@@ -592,21 +685,102 @@ storage solutions.
 </section>
 
 
-<!-- NOTE -->
+<!-- DOCUMENTATION -->
 
-<section class="note-section">
+<section class="documentation">
+
+<div class="title">
+
+<small>
+DOCUMENTATION
+</small>
+
+<h2>
+Quality Documentation
+</h2>
+
+<p>
+A professional area for verified company
+and product documentation.
+</p>
+
+</div>
+
+
+<div class="doc-grid">
+
+
+<div class="doc-card">
+
+<h3>
+Technical Specifications
+</h3>
+
+<p>
+Add approved technical specifications,
+dimensions, materials and product
+configuration information here.
+</p>
+
+</div>
+
+
+<div class="doc-card">
+
+<h3>
+Inspection Information
+</h3>
+
+<p>
+Add your actual inspection and testing
+information where appropriate.
+</p>
+
+</div>
+
+
+<div class="doc-card">
+
+<h3>
+Certificates
+</h3>
+
+<p>
+Verified certificates can be listed here
+with their correct names, numbers and
+validity information.
+</p>
+
+</div>
+
+
+<div class="doc-card">
+
+<h3>
+Regulatory Information
+</h3>
+
+<p>
+Add only regulatory information that
+applies to your actual company and
+specific products.
+</p>
+
+</div>
+
+
+</div>
+
 
 <div class="note">
 
-<strong>Catalog Note:</strong>
-
-The final catalog should contain only
-verified product names, specifications,
-sizes, materials, certifications and
-regulatory information. Replace the
-placeholder PDF with your approved
-APEX catalog before publishing the
-website.
+<strong>Important:</strong>
+Do not publish ISO, CE, FDA, MDR or any
+other certification or regulatory claim
+unless it has been verified for your
+company and the specific products.
+Incorrect regulatory claims should not
+be placed on the final website.
 
 </div>
 
@@ -618,7 +792,7 @@ website.
 <section class="cta">
 
 <h2>
-Need More Product Information?
+Need Product Information?
 </h2>
 
 <p>
@@ -681,10 +855,6 @@ About
 
 <a href="quality.html">
 Quality
-</a>
-
-<a href="catalog.html">
-Catalog
 </a>
 
 </div>
