@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Contact Us | APEX ORTHOPEDIC SYSTEMS</title>
-<link rel="icon" type="image/png" href="apex-logo.png">
-    <meta name="description" content="Contact APEX ORTHOPEDIC SYSTEMS for orthopedic plates, screws, surgical instruments and instrument cases.">
 
+    <link rel="icon" type="image/png" href="apex-logo.png">
     <link rel="stylesheet" href="style.css">
+
+    <meta name="description" content="Contact APEX ORTHOPEDIC SYSTEMS for orthopedic plates, screws, surgical instruments and instrument cases.">
 
     <style>
         .contact-hero {
@@ -32,6 +33,7 @@
 
         .contact-section {
             padding: 70px 20px;
+            background: #f5f9fc;
         }
 
         .contact-container {
@@ -83,7 +85,7 @@
             margin-top: 15px;
             padding: 14px 24px;
             background: #168a3b;
-            color: white;
+            color: white !important;
             border-radius: 7px;
             text-decoration: none;
             font-weight: bold;
@@ -95,8 +97,10 @@
         }
 
         .contact-form label {
+            display: block;
             font-weight: 600;
             color: #333;
+            margin-bottom: 7px;
         }
 
         .contact-form input,
@@ -137,6 +141,23 @@
             line-height: 1.5;
         }
 
+        footer {
+            background: #061f3d;
+            color: #c9d8e6;
+            padding: 40px 7% 20px;
+            text-align: center;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
         @media (max-width: 800px) {
             .contact-container {
                 grid-template-columns: 1fr;
@@ -146,54 +167,54 @@
                 font-size: 36px;
             }
         }
+
+        @media (max-width: 600px) {
+            .contact-info,
+            .contact-form {
+                padding: 25px 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
-<a href="index.html" class="logo">
-    <img src="apex-logo.png"
-         alt="APEX ORTHOPEDIC SYSTEMS"
-         style="width:190px; height:auto; display:block;">
-</a>
+    <a href="index.html" class="logo">
+        <img src="apex-logo.png"
+             alt="APEX ORTHOPEDIC SYSTEMS"
+             style="width:190px; height:auto; display:block;">
+    </a>
 
-<nav>
-
-<a href="index.html">
-HOME
-</a>
-
-<a href="products.html">
-PRODUCTS
-</a>
-
-<a href="index.html#about">
-ABOUT
-</a>
-
-<a href="index.html#quality">
-QUALITY
-</a>
-
-<a href="index.html#contact" class="contact">
-CONTACT
-</a>
-
-</nav>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="index.html#about">ABOUT</a>
+        <a href="quality.html">QUALITY</a>
+        <a href="contact.html" class="contact">CONTACT</a>
+    </nav>
 
 </header>
 
+
+<!-- CONTACT HERO -->
+
 <section class="contact-hero">
+
     <h1>CONTACT US</h1>
 
     <p>
         Connect with APEX ORTHOPEDIC SYSTEMS for product inquiries,
         quotations, catalogs and business inquiries.
     </p>
+
 </section>
 
+
+<!-- CONTACT SECTION -->
 
 <section class="contact-section">
 
@@ -211,50 +232,53 @@ CONTACT
             </div>
 
             <div class="contact-item">
+
                 <strong>Phone / WhatsApp</strong>
 
-                <!-- REPLACE THIS NUMBER -->
                 <p>
-                    <a href="tel:+92XXXXXXXXXX">
-                        +92 XXX XXXXXXX
+                    <a href="tel:+923053087646">
+                        +92 305 3087646
                     </a>
                 </p>
 
-                <!-- REPLACE 923XXXXXXXXX WITH YOUR REAL WHATSAPP NUMBER -->
-                <a
-                    class="whatsapp-btn"
-                    href="https://wa.me/923XXXXXXXXX"
-                    target="_blank">
+                <a class="whatsapp-btn"
+                   href="https://wa.me/923053087646"
+                   target="_blank"
+                   rel="noopener">
                     WhatsApp Inquiry
                 </a>
+
             </div>
 
             <div class="contact-item">
+
                 <strong>Email</strong>
 
-                <!-- REPLACE EMAIL -->
                 <p>
-                    <a href="mailto:info@yourdomain.com">
-                        info@yourdomain.com
+                    <a href="mailto:medialingoertho@gmail.com">
+                        medialingoertho@gmail.com
                     </a>
                 </p>
+
             </div>
 
             <div class="contact-item">
+
                 <strong>Location</strong>
 
-                <p>
-                    Pakistan
-                </p>
+                <p>Pakistan</p>
+
             </div>
 
             <div class="contact-item">
+
                 <strong>Business Inquiries</strong>
 
                 <p>
                     Orthopedic Plates • Screws • Surgical Instruments
                     • Instrument Cases
                 </p>
+
             </div>
 
         </div>
@@ -269,7 +293,7 @@ CONTACT
             <form id="inquiryForm">
 
                 <div>
-                    <label>Full Name</label>
+                    <label for="name">Full Name</label>
 
                     <input
                         type="text"
@@ -278,9 +302,8 @@ CONTACT
                         required>
                 </div>
 
-
                 <div>
-                    <label>Company / Organization</label>
+                    <label for="company">Company / Organization</label>
 
                     <input
                         type="text"
@@ -288,9 +311,8 @@ CONTACT
                         placeholder="Company Name">
                 </div>
 
-
                 <div>
-                    <label>Email</label>
+                    <label for="email">Email</label>
 
                     <input
                         type="email"
@@ -299,24 +321,23 @@ CONTACT
                         required>
                 </div>
 
-
                 <div>
-                    <label>Phone / WhatsApp</label>
+                    <label for="phone">Phone / WhatsApp</label>
 
                     <input
-                        type="text"
+                        type="tel"
                         id="phone"
                         placeholder="+92 XXX XXXXXXX">
                 </div>
 
-
                 <div>
-                    <label>Product Category</label>
+                    <label for="product">Product Category</label>
 
                     <select id="product">
                         <option value="">Select Product</option>
                         <option>Orthopedic Plates</option>
                         <option>Orthopedic Screws</option>
+                        <option>Nails & Implants</option>
                         <option>Surgical Instruments</option>
                         <option>Instrument Cases</option>
                         <option>Complete Product Range</option>
@@ -324,9 +345,8 @@ CONTACT
                     </select>
                 </div>
 
-
                 <div>
-                    <label>Message</label>
+                    <label for="message">Message</label>
 
                     <textarea
                         id="message"
@@ -334,19 +354,16 @@ CONTACT
                         required></textarea>
                 </div>
 
-
-                <button
-                    type="submit"
-                    class="submit-btn">
+                <button type="submit" class="submit-btn">
                     SEND INQUIRY ON WHATSAPP
                 </button>
 
             </form>
 
             <p class="inquiry-note">
-                This form opens WhatsApp with your inquiry details.
-                Please replace the WhatsApp number in the code with your
-                official business number before publishing the website.
+                After submitting, WhatsApp will open with your
+                inquiry details. Review the message and press
+                Send to contact APEX.
             </p>
 
         </div>
@@ -356,22 +373,34 @@ CONTACT
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
-    <div class="container">
 
-        <h3>APEX ORTHOPEDIC SYSTEMS</h3>
+    <h3>APEX ORTHOPEDIC SYSTEMS</h3>
 
-        <p>
-            Precision • Quality • Reliability
-        </p>
+    <p>Precision • Quality • Reliability</p>
 
-        <p>
-            © 2026 APEX ORTHOPEDIC SYSTEMS. All Rights Reserved.
-        </p>
+    <p>
+        Orthopedic Plates • Screws • Surgical Instruments • Instrument Cases
+    </p>
 
-    </div>
+    <p>
+        WhatsApp: +92 305 3087646
+    </p>
+
+    <p>
+        Email: medialingoertho@gmail.com
+    </p>
+
+    <p>
+        © 2026 APEX ORTHOPEDIC SYSTEMS. All Rights Reserved.
+    </p>
+
 </footer>
 
+
+<!-- WHATSAPP FORM SCRIPT -->
 
 <script>
 
@@ -379,28 +408,29 @@ document.getElementById("inquiryForm").addEventListener("submit", function(e) {
 
     e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const company = document.getElementById("company").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
+    const name = document.getElementById("name").value.trim();
+    const company = document.getElementById("company").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
     const product = document.getElementById("product").value;
-    const message = document.getElementById("message").value;
+    const message = document.getElementById("message").value.trim();
 
-    const whatsappNumber = "923XXXXXXXXX";
+    const whatsappNumber = "923053087646";
 
-    const text =
-        "APEX ORTHOPEDIC SYSTEMS - Product Inquiry%0A%0A" +
-        "Name: " + encodeURIComponent(name) + "%0A" +
-        "Company: " + encodeURIComponent(company) + "%0A" +
-        "Email: " + encodeURIComponent(email) + "%0A" +
-        "Phone: " + encodeURIComponent(phone) + "%0A" +
-        "Product: " + encodeURIComponent(product) + "%0A%0A" +
-        "Message: " + encodeURIComponent(message);
+    const inquiryText =
+        "APEX ORTHOPEDIC SYSTEMS - Product Inquiry\n\n" +
+        "Name: " + name + "\n" +
+        "Company: " + company + "\n" +
+        "Email: " + email + "\n" +
+        "Phone: " + phone + "\n" +
+        "Product: " + product + "\n\n" +
+        "Message: " + message;
 
-    window.open(
-        "https://wa.me/" + whatsappNumber + "?text=" + text,
-        "_blank"
-    );
+    const whatsappURL =
+        "https://wa.me/" + whatsappNumber +
+        "?text=" + encodeURIComponent(inquiryText);
+
+    window.open(whatsappURL, "_blank");
 
 });
 
