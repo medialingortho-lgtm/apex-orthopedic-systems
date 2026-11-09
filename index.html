@@ -138,6 +138,55 @@
                 font-size: 21px;
             }
         }
+        @media (max-width: 768px) {
+
+    header .container.nav {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 10px;
+        padding: 12px 18px !important;
+    }
+
+    header .brand-logo {
+        width: auto !important;
+        max-width: calc(100% - 65px) !important;
+        margin: 0 !important;
+    }
+
+    header .brand-logo img {
+        width: 155px !important;
+        max-width: 100% !important;
+    }
+
+    .mobile-menu-btn {
+        width: 46px !important;
+        height: 42px !important;
+        min-width: 46px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 23px !important;
+        border-radius: 7px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header nav {
+        flex-basis: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding-top: 8px !important;
+    }
+
+    header nav a {
+        padding: 12px !important;
+        font-size: 16px !important;
+        text-align: center;
+    }
+}
     </style>
 </head>
 
