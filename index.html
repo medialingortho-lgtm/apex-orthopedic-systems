@@ -15,6 +15,130 @@
           content="orthopedic implants, orthopedic plates, orthopedic screws, surgical instruments, instrument cases, APEX Orthopedic Systems">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- MOBILE RESPONSIVE STYLE -->
+    <style>
+        .mobile-menu-btn {
+            display: none;
+            background: #063b78;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 14px;
+            font-size: 27px;
+            cursor: pointer;
+            line-height: 1.2;
+        }
+
+        @media (max-width: 768px) {
+
+            header .nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 20px;
+            }
+
+            .brand-logo {
+                display: block;
+                max-width: 75%;
+            }
+
+            .brand-logo img {
+                display: block;
+                max-width: 180px;
+                width: 100%;
+                height: auto;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            header nav {
+                display: none !important;
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+                gap: 0;
+                padding-top: 12px;
+            }
+
+            header nav.mobile-open {
+                display: flex !important;
+            }
+
+            header nav a {
+                display: block;
+                width: 100%;
+                padding: 13px 10px;
+                border-top: 1px solid #e5e5e5;
+                font-size: 17px;
+            }
+
+            .hero {
+                padding-top: 55px;
+                padding-bottom: 55px;
+            }
+
+            .hero h1 {
+                font-size: clamp(36px, 10vw, 58px);
+                line-height: 1.12;
+                overflow-wrap: break-word;
+            }
+
+            .hero h2 {
+                font-size: clamp(21px, 6vw, 29px);
+                line-height: 1.4;
+            }
+
+            .hero p {
+                font-size: 17px;
+                line-height: 1.7;
+            }
+
+            .hero .btn {
+                display: inline-block;
+                margin: 7px 4px;
+            }
+
+            .section-title h2 {
+                font-size: 27px;
+                line-height: 1.3;
+            }
+
+            .category-grid,
+            .products-grid,
+            .quality-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            section > .container > h2 {
+                font-size: 28px !important;
+                line-height: 1.3;
+            }
+
+            footer {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .brand-logo img {
+                max-width: 145px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -27,7 +151,14 @@
             <img src="apex-logo.png" alt="APEX ORTHOPEDIC SYSTEMS">
         </a>
 
-        <nav>
+        <button class="mobile-menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open menu"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="mainNav">
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
             <a href="index.html#about">About Us</a>
@@ -156,7 +287,6 @@
                 </div>
             </div>
 
-
             <div class="product-card">
                 <img src="images/lc-dcp-narrow-45mm.png"
                      alt="LC-DCP Orthopedic Plate">
@@ -169,7 +299,6 @@
                     </p>
                 </div>
             </div>
-
 
             <div class="product-card">
                 <img src="images/orthopedic-t-plate.png"
@@ -184,7 +313,6 @@
                 </div>
             </div>
 
-
             <div class="product-card">
                 <img src="images/plate-designs-blue.png"
                      alt="Orthopedic Plate Designs">
@@ -198,7 +326,6 @@
                 </div>
             </div>
 
-
             <div class="product-card">
                 <img src="images/green-t-plates.png"
                      alt="Orthopedic T Plates">
@@ -211,7 +338,6 @@
                     </p>
                 </div>
             </div>
-
 
             <div class="product-card">
                 <img src="images/orthopedic-plate-design.png"
@@ -262,7 +388,6 @@
                 </p>
             </div>
 
-
             <div class="quality-card">
                 <h3>What We Offer</h3>
 
@@ -272,7 +397,6 @@
                     instrument sets and instrument cases.
                 </p>
             </div>
-
 
             <div class="quality-card">
                 <h3>Our Approach</h3>
@@ -313,7 +437,6 @@
                 </p>
             </div>
 
-
             <div class="quality-card">
                 <h3>Quality Focus</h3>
 
@@ -322,7 +445,6 @@
                     documentation across our product range.
                 </p>
             </div>
-
 
             <div class="quality-card">
                 <h3>Product Range</h3>
@@ -379,6 +501,33 @@
 
     </div>
 </footer>
+
+
+<!-- MOBILE MENU SCRIPT -->
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("mainNav");
+    const button = document.querySelector(".mobile-menu-btn");
+
+    nav.classList.toggle("mobile-open");
+
+    const isOpen = nav.classList.contains("mobile-open");
+
+    button.setAttribute("aria-expanded", isOpen);
+    button.innerHTML = isOpen ? "✕" : "☰";
+}
+
+document.querySelectorAll("#mainNav a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        const nav = document.getElementById("mainNav");
+        const button = document.querySelector(".mobile-menu-btn");
+
+        nav.classList.remove("mobile-open");
+        button.innerHTML = "☰";
+        button.setAttribute("aria-expanded", "false");
+    });
+});
+</script>
 
 </body>
 </html>
