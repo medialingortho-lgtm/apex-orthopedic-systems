@@ -16,54 +16,64 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- MOBILE RESPONSIVE STYLE -->
     <style>
+        /* MOBILE MENU BUTTON */
         .mobile-menu-btn {
             display: none;
             background: #063b78;
             color: white;
             border: none;
-            border-radius: 6px;
-            padding: 8px 14px;
-            font-size: 27px;
+            border-radius: 7px;
+            width: 46px;
+            height: 42px;
+            font-size: 23px;
             cursor: pointer;
-            line-height: 1.2;
+            align-items: center;
+            justify-content: center;
         }
 
+        /* MOBILE RESPONSIVE DESIGN */
         @media (max-width: 768px) {
 
-            header .nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                align-items: center;
-                padding: 15px 20px;
+            header .container.nav {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                gap: 10px;
+                padding: 12px 18px !important;
             }
 
-            .brand-logo {
+            header .brand-logo {
                 display: block;
-                max-width: 75%;
+                width: auto !important;
+                max-width: calc(100% - 65px) !important;
+                margin: 0 !important;
             }
 
-            .brand-logo img {
+            header .brand-logo img {
                 display: block;
-                max-width: 180px;
-                width: 100%;
-                height: auto;
+                width: 220px !important;
+                max-width: 100% !important;
+                height: auto !important;
             }
 
             .mobile-menu-btn {
-                display: block;
+                display: flex !important;
+                flex-shrink: 0;
             }
 
             header nav {
                 display: none !important;
-                width: 100%;
-                flex-direction: column;
-                align-items: stretch;
+                flex-basis: 100% !important;
+                width: 100% !important;
+                flex-direction: column !important;
+                align-items: stretch !important;
                 text-align: center;
                 gap: 0;
-                padding-top: 12px;
+                margin: 0 !important;
+                padding-top: 8px !important;
             }
 
             header nav.mobile-open {
@@ -73,9 +83,10 @@
             header nav a {
                 display: block;
                 width: 100%;
-                padding: 13px 10px;
+                padding: 12px !important;
+                font-size: 16px !important;
+                text-align: center;
                 border-top: 1px solid #e5e5e5;
-                font-size: 17px;
             }
 
             .hero {
@@ -126,8 +137,8 @@
         }
 
         @media (max-width: 380px) {
-            .brand-logo img {
-                max-width: 145px;
+            header .brand-logo img {
+                width: 190px !important;
             }
 
             .hero h1 {
@@ -138,55 +149,6 @@
                 font-size: 21px;
             }
         }
-        @media (max-width: 768px) {
-
-    header .container.nav {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        gap: 10px;
-        padding: 12px 18px !important;
-    }
-
-    header .brand-logo {
-        width: auto !important;
-        max-width: calc(100% - 65px) !important;
-        margin: 0 !important;
-    }
-
-    header .brand-logo img {
-        width: 155px !important;
-        max-width: 100% !important;
-    }
-
-    .mobile-menu-btn {
-        width: 46px !important;
-        height: 42px !important;
-        min-width: 46px !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        font-size: 23px !important;
-        border-radius: 7px !important;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-    }
-
-    header nav {
-        flex-basis: 100% !important;
-        width: 100% !important;
-        margin: 0 !important;
-        padding-top: 8px !important;
-    }
-
-    header nav a {
-        padding: 12px !important;
-        font-size: 16px !important;
-        text-align: center;
-    }
-}
     </style>
 </head>
 
