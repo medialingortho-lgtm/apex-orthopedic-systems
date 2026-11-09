@@ -1,202 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>APEX ORTHOPEDIC SYSTEMS | Orthopedic Plates, Screws & Instruments</title>
+    <title>APEX ORTHOPEDIC SYSTEMS | Orthopedic Plates, Screws & Instruments</title>
 
-<link rel="icon" type="image/png" href="apex-logo.png">
+    <link rel="icon" type="image/png" href="apex-logo.png">
 
-<meta name="description" content="APEX ORTHOPEDIC SYSTEMS provides orthopedic plates, screws, surgical instruments and instrument cases.">
+    <meta name="description"
+          content="APEX ORTHOPEDIC SYSTEMS provides orthopedic plates, screws, surgical instruments and instrument cases. Explore our product range and contact us for business inquiries.">
 
-<meta name="keywords" content="orthopedic implants, orthopedic plates, orthopedic screws, surgical instruments, instrument cases, APEX Orthopedic Systems">
+    <meta name="keywords"
+          content="orthopedic implants, orthopedic plates, orthopedic screws, surgical instruments, instrument cases, orthopedic manufacturer, APEX Orthopedic Systems">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<style>
+    <style>
+        /* HEADER FIX */
 
-/* HEADER */
+        header .container.nav {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
 
-header {
-    width: 100%;
-}
+        header .brand-logo {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            margin: 0 auto 0 0 !important;
+            padding: 0 !important;
+            flex-shrink: 0 !important;
+            text-align: left !important;
+            transform: none !important;
+        }
 
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
+        header .brand-logo img {
+            width: 190px !important;
+            max-width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            margin: 0 !important;
+        }
 
-/* LOGO */
+        .mobile-menu-btn {
+            display: none;
+            border: none;
+            background: #063b78;
+            color: white;
+            font-size: 27px;
+            width: 46px;
+            height: 42px;
+            border-radius: 6px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
 
-.brand-logo {
-    display: block;
-    margin-right: auto;
-    text-align: left;
-}
+        @media (max-width: 768px) {
 
-.brand-logo img {
-    width: 280px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0;
-}
+            header {
+                padding: 10px 12px !important;
+            }
 
-/* DESKTOP MENU */
+            header .container.nav {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                gap: 10px !important;
+            }
 
-.menu-toggle {
-    display: none;
-    background: #063b78;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    width: 46px;
-    height: 42px;
-    font-size: 27px;
-    cursor: pointer;
-    line-height: 1;
-}
+            header .brand-logo {
+                display: flex !important;
+                justify-content: flex-start !important;
+                align-items: center !important;
+                margin: 0 auto 0 0 !important;
+                padding: 0 !important;
+                position: static !important;
+                left: auto !important;
+                right: auto !important;
+                transform: none !important;
+                float: none !important;
+                flex: 0 1 auto !important;
+            }
 
-.nav nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+            header .brand-logo img {
+                width: 155px !important;
+                max-width: 100% !important;
+                height: auto !important;
+                margin: 0 !important;
+            }
 
-/* MOBILE DESIGN */
+            .mobile-menu-btn {
+                display: block !important;
+                margin-left: auto !important;
+            }
 
-@media (max-width: 768px) {
+            header nav {
+                display: none !important;
+                position: absolute !important;
+                top: 100% !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                background: white !important;
+                padding: 12px 15px !important;
+                box-sizing: border-box !important;
+                box-shadow: 0 5px 12px rgba(0,0,0,0.15) !important;
+                text-align: left !important;
+                z-index: 9999 !important;
+            }
 
-    header {
-        padding: 12px 4% !important;
-    }
+            header nav.active {
+                display: flex !important;
+                flex-direction: column !important;
+            }
 
-    .nav {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+            header nav a {
+                display: block !important;
+                padding: 12px 8px !important;
+                margin: 0 !important;
+                font-size: 15px !important;
+                text-align: left !important;
+            }
 
-    /* LOGO LEFT SIDE */
-
-    .brand-logo {
-        display: block !important;
-        margin: 0 auto 0 0 !important;
-        text-align: left !important;
-        max-width: calc(100% - 60px);
-    }
-
-    .brand-logo img {
-        width: 320px !important;
-        max-width: 100% !important;
-        height: auto !important;
-        margin: 0 !important;
-        display: block !important;
-    }
-
-    /* MENU BUTTON RIGHT SIDE */
-
-    .menu-toggle {
-        display: block !important;
-        flex-shrink: 0;
-        margin-left: auto;
-    }
-
-    /* MENU LINKS */
-
-    .nav nav {
-        display: none !important;
-        width: 100%;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 0 !important;
-        padding: 10px 0;
-        background: white;
-    }
-
-    .nav nav.active {
-        display: flex !important;
-    }
-
-    .nav nav a {
-        display: block;
-        text-align: center;
-        padding: 12px 10px;
-        margin: 0 !important;
-        font-size: 15px !important;
-        border-bottom: 1px solid #eeeeee;
-    }
-
-    /* HERO */
-
-    .hero h1 {
-        font-size: 38px !important;
-        line-height: 1.15;
-    }
-
-    .hero h2 {
-        font-size: 18px !important;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    /* GRIDS */
-
-    .category-grid,
-    .products-grid,
-    .quality-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    section {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-}
-
-/* SMALL MOBILE */
-
-@media (max-width: 380px) {
-
-    .brand-logo img {
-        width: 250px !important;
-    }
-
-    .hero h1 {
-        font-size: 32px !important;
-    }
-}
-@media (max-width: 768px) {
-    header .container.nav {
-        justify-content: flex-start !important;
-        align-items: center !important;
-    }
-
-    header .brand-logo {
-        margin-left: 0 !important;
-        margin-right: auto !important;
-        text-align: left !important;
-        float: left !important;
-        position: relative !important;
-        left: 0 !important;
-        transform: none !important;
-    }
-
-    header .brand-logo img {
-        display: block !important;
-        margin-left: 0 !important;
-        margin-right: auto !important;
-    }
-}
-</style>
+            header {
+                position: relative !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -210,8 +149,9 @@ header {
             <img src="apex-logo.png" alt="APEX ORTHOPEDIC SYSTEMS">
         </a>
 
-        <button class="menu-toggle"
-                id="menuToggle"
+        <button class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                type="button"
                 aria-label="Open menu"
                 aria-expanded="false">
             ☰
@@ -234,7 +174,6 @@ header {
 
 <section class="hero">
     <div class="container">
-
         <div class="hero-content">
 
             <h1>
@@ -343,7 +282,6 @@ header {
 
                 <div class="product-card-content">
                     <h3>Distal Tibia Plate</h3>
-
                     <p>
                         Precision orthopedic plate design
                         for professional applications.
@@ -358,7 +296,6 @@ header {
 
                 <div class="product-card-content">
                     <h3>LC-DCP Plate</h3>
-
                     <p>
                         Orthopedic plate design manufactured
                         for professional use.
@@ -373,7 +310,6 @@ header {
 
                 <div class="product-card-content">
                     <h3>Orthopedic T Plate</h3>
-
                     <p>
                         Precision plate design available
                         within the APEX product range.
@@ -388,7 +324,6 @@ header {
 
                 <div class="product-card-content">
                     <h3>Plate Designs</h3>
-
                     <p>
                         Multiple orthopedic plate designs
                         and configurations.
@@ -403,7 +338,6 @@ header {
 
                 <div class="product-card-content">
                     <h3>T Plate Range</h3>
-
                     <p>
                         Professional orthopedic plate
                         designs for different requirements.
@@ -418,7 +352,6 @@ header {
 
                 <div class="product-card-content">
                     <h3>Orthopedic Implant Plates</h3>
-
                     <p>
                         A selection of orthopedic implant
                         plate designs.
@@ -456,27 +389,22 @@ header {
 
             <div class="quality-card">
                 <h3>Precision</h3>
-
                 <p>
                     Focus on accurate product design,
                     dimensions and manufacturing consistency.
                 </p>
             </div>
 
-
             <div class="quality-card">
                 <h3>Quality Focus</h3>
-
                 <p>
                     Quality-focused processes and
                     documentation across our product range.
                 </p>
             </div>
 
-
             <div class="quality-card">
                 <h3>Product Range</h3>
-
                 <p>
                     Orthopedic plates, screws, instruments
                     and instrument cases under one brand.
@@ -491,7 +419,6 @@ header {
 <!-- CONTACT CTA -->
 
 <section style="background:#063b78; color:white;">
-
     <div class="container" style="text-align:center;">
 
         <h2 style="font-size:38px; margin-bottom:15px;">
@@ -537,37 +464,17 @@ header {
 <!-- MOBILE MENU SCRIPT -->
 
 <script>
+    const menuButton = document.getElementById("mobileMenuBtn");
+    const mainNav = document.getElementById("mainNav");
 
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
+    menuButton.addEventListener("click", function () {
+        mainNav.classList.toggle("active");
 
-menuToggle.addEventListener("click", function () {
+        const isOpen = mainNav.classList.contains("active");
 
-    mainNav.classList.toggle("active");
-
-    const isOpen = mainNav.classList.contains("active");
-
-    menuToggle.setAttribute("aria-expanded", isOpen);
-
-    menuToggle.innerHTML = isOpen ? "✕" : "☰";
-
-});
-
-
-mainNav.querySelectorAll("a").forEach(function(link) {
-
-    link.addEventListener("click", function() {
-
-        mainNav.classList.remove("active");
-
-        menuToggle.setAttribute("aria-expanded", "false");
-
-        menuToggle.innerHTML = "☰";
-
+        menuButton.setAttribute("aria-expanded", isOpen);
+        menuButton.innerHTML = isOpen ? "✕" : "☰";
     });
-
-});
-
 </script>
 
 </body>
