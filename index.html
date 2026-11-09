@@ -15,7 +15,9 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
+
 /* HEADER */
+
 header {
     width: 100%;
 }
@@ -27,14 +29,24 @@ header {
     gap: 20px;
 }
 
+/* LOGO */
+
+.brand-logo {
+    display: block;
+    margin-right: auto;
+    text-align: left;
+}
+
 .brand-logo img {
     width: 280px;
     max-width: 100%;
     height: auto;
     display: block;
+    margin: 0;
 }
 
 /* DESKTOP MENU */
+
 .menu-toggle {
     display: none;
     background: #063b78;
@@ -54,7 +66,8 @@ header {
     gap: 20px;
 }
 
-/* MOBILE */
+/* MOBILE DESIGN */
+
 @media (max-width: 768px) {
 
     header {
@@ -70,21 +83,32 @@ header {
         gap: 10px;
     }
 
+    /* LOGO LEFT SIDE */
+
     .brand-logo {
-        display: block;
+        display: block !important;
+        margin: 0 auto 0 0 !important;
+        text-align: left !important;
         max-width: calc(100% - 60px);
     }
 
     .brand-logo img {
-        width: 280px !important;
+        width: 320px !important;
         max-width: 100% !important;
         height: auto !important;
+        margin: 0 !important;
+        display: block !important;
     }
+
+    /* MENU BUTTON RIGHT SIDE */
 
     .menu-toggle {
         display: block !important;
         flex-shrink: 0;
+        margin-left: auto;
     }
+
+    /* MENU LINKS */
 
     .nav nav {
         display: none !important;
@@ -109,6 +133,8 @@ header {
         border-bottom: 1px solid #eeeeee;
     }
 
+    /* HERO */
+
     .hero h1 {
         font-size: 38px !important;
         line-height: 1.15;
@@ -122,6 +148,8 @@ header {
         font-size: 15px;
     }
 
+    /* GRIDS */
+
     .category-grid,
     .products-grid,
     .quality-grid {
@@ -134,7 +162,10 @@ header {
     }
 }
 
+/* SMALL MOBILE */
+
 @media (max-width: 380px) {
+
     .brand-logo img {
         width: 250px !important;
     }
@@ -143,8 +174,8 @@ header {
         font-size: 32px !important;
     }
 }
-</style>
 
+</style>
 </head>
 
 <body>
@@ -182,6 +213,7 @@ header {
 
 <section class="hero">
     <div class="container">
+
         <div class="hero-content">
 
             <h1>
@@ -222,6 +254,7 @@ header {
 
         <div class="section-title">
             <h2>OUR PRODUCT CATEGORIES</h2>
+
             <p>
                 Explore our range of orthopedic products and
                 surgical solutions.
@@ -274,6 +307,7 @@ header {
 
         <div class="section-title">
             <h2>FEATURED PRODUCTS</h2>
+
             <p>
                 Selected products from the APEX orthopedic
                 product range.
@@ -285,8 +319,10 @@ header {
             <div class="product-card">
                 <img src="images/distal-tibia-safety-lock-plate.png"
                      alt="Orthopedic Plate">
+
                 <div class="product-card-content">
                     <h3>Distal Tibia Plate</h3>
+
                     <p>
                         Precision orthopedic plate design
                         for professional applications.
@@ -294,11 +330,14 @@ header {
                 </div>
             </div>
 
+
             <div class="product-card">
                 <img src="images/lc-dcp-narrow-45mm.png"
                      alt="LC-DCP Orthopedic Plate">
+
                 <div class="product-card-content">
                     <h3>LC-DCP Plate</h3>
+
                     <p>
                         Orthopedic plate design manufactured
                         for professional use.
@@ -306,11 +345,14 @@ header {
                 </div>
             </div>
 
+
             <div class="product-card">
                 <img src="images/orthopedic-t-plate.png"
                      alt="Orthopedic T Plate">
+
                 <div class="product-card-content">
                     <h3>Orthopedic T Plate</h3>
+
                     <p>
                         Precision plate design available
                         within the APEX product range.
@@ -318,11 +360,14 @@ header {
                 </div>
             </div>
 
+
             <div class="product-card">
                 <img src="images/plate-designs-blue.png"
                      alt="Orthopedic Plate Designs">
+
                 <div class="product-card-content">
                     <h3>Plate Designs</h3>
+
                     <p>
                         Multiple orthopedic plate designs
                         and configurations.
@@ -330,11 +375,14 @@ header {
                 </div>
             </div>
 
+
             <div class="product-card">
                 <img src="images/green-t-plates.png"
                      alt="Orthopedic T Plates">
+
                 <div class="product-card-content">
                     <h3>T Plate Range</h3>
+
                     <p>
                         Professional orthopedic plate
                         designs for different requirements.
@@ -342,11 +390,14 @@ header {
                 </div>
             </div>
 
+
             <div class="product-card">
                 <img src="images/orthopedic-plate-design.png"
                      alt="Orthopedic Implant Plate">
+
                 <div class="product-card-content">
                     <h3>Orthopedic Implant Plates</h3>
+
                     <p>
                         A selection of orthopedic implant
                         plate designs.
@@ -373,6 +424,7 @@ header {
 
         <div class="section-title">
             <h2>WHY APEX ORTHOPEDIC SYSTEMS</h2>
+
             <p>
                 Our approach is built around precision,
                 consistency and professional product presentation.
@@ -383,22 +435,27 @@ header {
 
             <div class="quality-card">
                 <h3>Precision</h3>
+
                 <p>
                     Focus on accurate product design,
                     dimensions and manufacturing consistency.
                 </p>
             </div>
 
+
             <div class="quality-card">
                 <h3>Quality Focus</h3>
+
                 <p>
                     Quality-focused processes and
                     documentation across our product range.
                 </p>
             </div>
 
+
             <div class="quality-card">
                 <h3>Product Range</h3>
+
                 <p>
                     Orthopedic plates, screws, instruments
                     and instrument cases under one brand.
@@ -413,6 +470,7 @@ header {
 <!-- CONTACT CTA -->
 
 <section style="background:#063b78; color:white;">
+
     <div class="container" style="text-align:center;">
 
         <h2 style="font-size:38px; margin-bottom:15px;">
@@ -458,25 +516,37 @@ header {
 <!-- MOBILE MENU SCRIPT -->
 
 <script>
+
 const menuToggle = document.getElementById("menuToggle");
 const mainNav = document.getElementById("mainNav");
 
 menuToggle.addEventListener("click", function () {
+
     mainNav.classList.toggle("active");
 
     const isOpen = mainNav.classList.contains("active");
 
     menuToggle.setAttribute("aria-expanded", isOpen);
+
     menuToggle.innerHTML = isOpen ? "✕" : "☰";
+
 });
 
+
 mainNav.querySelectorAll("a").forEach(function(link) {
+
     link.addEventListener("click", function() {
+
         mainNav.classList.remove("active");
+
         menuToggle.setAttribute("aria-expanded", "false");
+
         menuToggle.innerHTML = "☰";
+
     });
+
 });
+
 </script>
 
 </body>
