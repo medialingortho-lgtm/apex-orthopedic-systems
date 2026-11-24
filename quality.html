@@ -32,32 +32,40 @@ body{
 }
 
 /* HEADER */
-
 header{
     background:white;
     min-height:80px;
-    padding:15px 7%;
+    padding:12px 5%;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:24px;
     box-shadow:0 3px 15px rgba(0,0,0,.08);
     position:sticky;
     top:0;
     z-index:1000;
 }
 
-.brand-logo{
+/* IMAGE LOGO ONLY — no extra text beside/under it */
+.logo{
     display:flex;
     align-items:center;
-    flex-shrink:0;
+    flex:0 0 auto;
+    width:190px;
+    color:transparent;
+    font-size:0;
+    line-height:0;
+    letter-spacing:0;
     text-decoration:none;
 }
 
-.brand-logo img{
-    width:190px;
-    height:65px;
+.logo img{
+    display:block !important;
+    width:190px !important;
+    height:65px !important;
+    max-width:100%;
     object-fit:contain;
-    display:block;
+    object-position:left center;
 }
 
 nav a{
@@ -391,11 +399,15 @@ footer a:hover{
 }
 
 @media(max-width:600px){
-
-    .brand-logo img{
-        width:150px;
-        height:55px;
+    .logo{
+        width:165px;
+        justify-content:center;
     }
+    .logo img{
+        width:165px !important;
+        height:56px !important;
+    }
+
 
     header{
         flex-direction:column;
@@ -437,10 +449,8 @@ footer a:hover{
 
 <header>
 
-<a href="index.html" class="brand-logo">
-    <img src="apex-logo.png"
-         alt="APEX ORTHOPEDIC SYSTEMS"
-         style="width:190px; height:auto; display:block;">
+<a href="index.html" class="logo">
+    <img src="./apex-logo.png" alt="APEX logo">
 </a>
 
 <nav>
